@@ -10,7 +10,13 @@ namespace GUI {
 #define SIMCANVAS_RENDER 0x005CD2F4
 #define SIMCANVAS_RENDERGUI_CALL 0x005D9658
 
-	CodePatch cpDrawGUI = { SIMCANVAS_RENDERGUI_CALL, "\xe8\x97\x3c\xff\xff", "\xe8\xfb\xe2\x0b\x00", 5, false };
+	CodePatch cpDrawGUI = {
+		SIMCANVAS_RENDERGUI_CALL, 
+		"\xe8\x97\x3c\xff\xff", 
+		"\xe8\xfb\xe2\x0b\x00", 
+		5, 
+		false 
+	};
 
 	u32 fnOnRender, fnRenderGui = SIMCANVAS_RENDER;
 	Fear::GraphicsAdapter* gfxAdapter;

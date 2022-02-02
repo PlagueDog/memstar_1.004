@@ -1,0 +1,5 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define NAKED __declspec(naked)
+#define BuiltInFunction(__scripted__, __name__) const char * __stdcall __name__##bin(s32 argc, const char *self, const char *argv[]); NAKED const char *__name__##stub() { __asm { mov eax, [esp+4] } __asm { add eax, 4 } __asm { push eax } __asm { sub eax, 4 } __asm { push dword ptr [eax] } __asm { dec ecx } __asm { push ecx } __asm { call __name__##bin } __asm { retn 4 } } static const Console::ConsoleConstructor cc##__name__( __scripted__, __name__##stub ); const char * __stdcall __name__##bin(s32 argc, const char *self, const char *argv[])

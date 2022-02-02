@@ -25,7 +25,7 @@
 
 //#define VER_SPECIAL_STR             ""
 //#define VER_PRIVATE_STR             ""
-#define VER_COMMENT_STR             "StarsiegePlayers Build on 2021-06-30"
+#define VER_COMMENT_STR             "Build Dec-2021"
 
 // Required Information
 #define VER_FILEVERSION             1,0,0,1
@@ -34,11 +34,11 @@
 #define VER_PRODUCTVERSION          1,0,0,1
 #define VER_PRODUCTVERSIONSTR       1.0.0.1 Neo
 
-#define VER_COMPANYNAME_STR         "Starsiege Players Community"
-#define VER_PRODUCTNAME_STR         "mem.dll replacement for Starsiege"
-#define VER_FILEDESCRIPTION_STR     "Memstar's replacment mem.dll expands and fixes various functionality in Starsiege"
+#define VER_COMPANYNAME_STR         ""
+#define VER_PRODUCTNAME_STR         "mem.dll (1.004r only)"
+#define VER_FILEDESCRIPTION_STR     "OpenGL | Software resolution fixes. Modloader implementing"
 #define VER_INTERNALNAME_STR        "memstar.dll"
-#define VER_LEGALCOPYRIGHT_STR      "Copyright (C) 2021 Starsiege Players Community, et al."
+#define VER_LEGALCOPYRIGHT_STR      ""
 #define VER_ORIGINALFILENAME_STR    "mem.dll"
 
 #define JOIN(a, b, c, d, e, f, g) JOIN_AGAIN(a, b, c, d, e, f, g)

@@ -47,6 +47,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
+    <OutDir>..\..\..\..\..\Dynamix\StarsiegeComplete</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -99,6 +100,7 @@
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="DLLMain.cpp" />
     <ClCompile Include="ExeFixes.cpp" />
+    <ClCompile Include="Modloader.cpp" />
     <ClCompile Include="Fear.cpp" />
     <ClCompile Include="FileSystem.cpp" />
     <ClCompile Include="Font.cpp" />
@@ -182,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

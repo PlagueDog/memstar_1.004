@@ -22,6 +22,7 @@ namespace Replacer {
 	typedef HashTable< u32, String > OriginalHash;
 
 	BuiltInVariable("pref::showMatchedTextures", bool, prefShowMatchedTextures, false)
+	BuiltInVariable("pref::echoMatchedTextures", bool, prefEchoMatchedTextures, false)
 
 		bool lastScanMatched = false;
 	bool foundLastCRC = false;
@@ -82,7 +83,7 @@ namespace Replacer {
 
 		lastFoundCRC = HashBytes(bmp->bitmapData, bmp->width * bmp->height);
 		const String* file = FindOriginalName(lastFoundCRC);
-		if (file != NULL)
+		if (file != NULL && prefEchoMatchedTextures)
 			Console::echo("Matched texture %s", file->c_str());
 		foundLastCRC = (file != NULL);
 		lastMatchedTexture = FindReplacement(file);
