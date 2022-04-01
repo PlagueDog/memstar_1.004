@@ -115,6 +115,7 @@
     <ClCompile Include="OpenGL.cpp" />
     <ClCompile Include="PlayGui.cpp" />
     <ClCompile Include="Replacer.cpp" />
+    <ClCompile Include="screenCap.cpp" />
     <ClCompile Include="ScriptGL.cpp" />
     <ClCompile Include="StringFunctions.cpp" />
     <ClCompile Include="Terrain.cpp" />

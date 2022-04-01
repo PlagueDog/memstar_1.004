@@ -1,6 +1,7 @@
 #include "Console.h"
 #include "Patch.h"
 #include <stdlib.h>
+#include <cstdint>
 
 namespace ModloaderMain {
 
@@ -29,6 +30,12 @@ namespace ModloaderMain {
 		return "true";
 	}
 
+	BuiltInFunction("subroutine", _hc) {
+		typedef int (*FunctionType)();
+		FunctionType hardcallf = (FunctionType)0x0046662C; //0x004458A4
+		hardcallf();
+		return "true";
+	}
 	// CodePatch Opengl_widescreen = {
 		// 0x0064B74B,
 		// "",

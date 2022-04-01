@@ -17,6 +17,13 @@ namespace ExeFixes {
 		14,
 		false
 	};
+	CodePatch Smooth_Mapview = { //Smooths the elevation rings on the "satellite map"
+		0x00517A78,
+		"",
+		"\x00\x00\xC0\x42\x00\x00\xB0\x3E",
+		8,
+		false
+	};
 	//                                                 |.  8DBD 38FFFFFF     LEA EDI,DWORD PTR SS:[EBP-C8]
 	CodePatch dosfix = {
 		0x0068C6B2,
@@ -70,6 +77,7 @@ namespace ExeFixes {
 		Init() {
 			Opengl_widescreen.Apply(true);
 			Software_widescreen.Apply(true);
+			Smooth_Mapview.Apply(true);
 			dosfix.DoctorRelative((u32)DosFix, 1).Apply(true);
 		}
 	} init;
