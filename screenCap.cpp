@@ -38,10 +38,8 @@ namespace screenCap {
     void TakeScreenShot()
     {
         //Printscreen 1 screen
-        sendKeyDown(VK_CONTROL);
         sendKeyDown(VK_MENU);
         sendKeyDown(VK_SNAPSHOT);
-        sendKeyUp(VK_CONTROL);
         sendKeyUp(VK_MENU);
         sendKeyUp(VK_SNAPSHOT);
 
